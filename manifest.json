@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Virality Prediction",
+    "version": "1.0",
+    "description": "Predict and invest in the virality of tweets",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
